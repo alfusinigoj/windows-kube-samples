@@ -11,3 +11,5 @@ In general these Dockerfiles should be buildable and runnable on Windows 10, but
 * **asp-with-oledb** A classic ASP project that connects to a SQL Server database via OLEDB
 
 * **asp-with-odbc** A classic ASP project that connects to a SQL Server database via ODBC with a DSN configured at the system level
+
+* **dotnet2.0-webforms** An ASP.NET 2.0 WebForms sample
