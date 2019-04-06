@@ -17,3 +17,5 @@ Unless noted otherwise the strategy used in these samples is to have zero code c
 * **dotnet2.0-webforms** An ASP.NET 2.0 WebForms sample
 
 * **dotnet2.0-webconfig-configmap** An ASP.NET 2.0 WebForms sample whose configuration is sourced from a ConfigMap
+
+* **dotnet2.0-webconfig-atlcom32** An ASP.NET 2.0 WebForms sample that depends on a custom 32-bit ATL/COM library

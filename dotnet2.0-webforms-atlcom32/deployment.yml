@@ -1,0 +1,26 @@
+﻿---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+    labels:
+        app: dotnet2atlcom
+    name: dotnet2atlcom
+spec:
+    replicas: 1
+    template:
+        metadata:
+            labels:
+                app: dotnet2atlcom
+            name: dotnet2atlcom
+        spec:
+            containers:
+            - name: webapp
+              image: <insert your repo/image:tag here>
+              ports:
+              - containerPort: 80
+            tolerations:
+            - key: windows
+              value: "1803"
+              effect: NoSchedule
+            nodeSelector:
+                beta.kubernetes.io/os: windows

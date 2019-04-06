@@ -6,8 +6,6 @@ An alternate strategy that would require slight modification to the project woul
 
 ## Dockerfile
 
-The `Dockerfile` assume that you've published the application to the `bin\Release\Publish` folder.
-
-The `Dockerfile` also assumes that your solution is named Dotnet2WebForms and is placed at the same level as the `Dockerfile`.
+The `Dockerfile` assumes that your solution is named Dotnet2WebForms and is placed at the same level as the `Dockerfile`. The `Dockerfile` also assumes that you've published the application to the `bin\Release\Publish` folder.
 
 ## TODO

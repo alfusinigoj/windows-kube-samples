@@ -1,0 +1,35 @@
+// ATLPKS.idl : IDL source for ATLPKS
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ATLPKS.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(C64EC0B1-56E4-43B5-AEC2-4C881CF822FE),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IThing : IDispatch{
+	[id(1)] HRESULT Action([out,retval] BSTR* retstr);
+};
+[
+	uuid(C4D79485-725C-42E6-92CD-8AA2B366CA24),
+	version(1.0),
+]
+library ATLPKSLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(E8DEA7F4-7526-4265-876A-5D2300BBAB6C)		
+	]
+	coclass Thing
+	{
+		[default] interface IThing;
+	};
+};
+

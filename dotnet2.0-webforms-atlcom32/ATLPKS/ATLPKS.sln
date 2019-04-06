@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ATLPKS", "ATLPKS\ATLPKS.vcxproj", "{8F14233C-23D4-4883-8769-409E90781D63}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ATLPKSPS", "ATLPKS\ATLPKSPS.vcxproj", "{45509F13-3497-41BC-86C5-C4DA37FA4827}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8F14233C-23D4-4883-8769-409E90781D63} = {8F14233C-23D4-4883-8769-409E90781D63}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F14233C-23D4-4883-8769-409E90781D63}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8F14233C-23D4-4883-8769-409E90781D63}.Debug|Win32.Build.0 = Debug|Win32
+		{8F14233C-23D4-4883-8769-409E90781D63}.Debug|x64.ActiveCfg = Debug|x64
+		{8F14233C-23D4-4883-8769-409E90781D63}.Debug|x64.Build.0 = Debug|x64
+		{8F14233C-23D4-4883-8769-409E90781D63}.Release|Win32.ActiveCfg = Release|Win32
+		{8F14233C-23D4-4883-8769-409E90781D63}.Release|Win32.Build.0 = Release|Win32
+		{8F14233C-23D4-4883-8769-409E90781D63}.Release|x64.ActiveCfg = Release|x64
+		{8F14233C-23D4-4883-8769-409E90781D63}.Release|x64.Build.0 = Release|x64
+		{45509F13-3497-41BC-86C5-C4DA37FA4827}.Debug|Win32.ActiveCfg = Debug|Win32
+		{45509F13-3497-41BC-86C5-C4DA37FA4827}.Debug|x64.ActiveCfg = Debug|x64
+		{45509F13-3497-41BC-86C5-C4DA37FA4827}.Release|Win32.ActiveCfg = Release|Win32
+		{45509F13-3497-41BC-86C5-C4DA37FA4827}.Release|x64.ActiveCfg = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
