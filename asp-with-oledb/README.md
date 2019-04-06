@@ -13,8 +13,7 @@ In `default.asp` you'll have to specify the connection string relevant to your e
 While specifying such information directly in code is not desirable, it's a pattern often found in legacy ASP applications. In the future content will be added demonstrating config externalization.
 
 ## TODO
-* Config externalization
-* K8s YAML spec
+* Config externalization (Maybe separate sample)
 
 ## Notes
 
