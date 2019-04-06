@@ -1,8 +1,8 @@
 # Dotnet 2.0 WebForms
 
-Here lies a simple ASP.NET 2.0 WebForms application. This sample demonstrates injecting a Web.config file into an application by way of a ConfigMap.
+Here lies a simple ASP.NET 2.0 WebForms application. This sample demonstrates injecting a `Web.config` file into an application by way of a ConfigMap.
 
-On Windows workers volumes can only be mounted on directories rather than also onto files so there was no way to inject the Web.config directly into the application directory (a requirement for ASP.NET web apps). Instead, the ConfigMap is mounted to `C:\config` and the `Web.config` is then copied into the application *BEFORE* IIS starts, thus not causing an application restart.
+On Windows workers volumes can only be mounted on directories rather than also onto files so there was no way to inject the `Web.config` directly into the application directory (a requirement for ASP.NET web apps). Instead, the ConfigMap is mounted to `C:\config` and the `Web.config` is then copied into the application *BEFORE* IIS starts, thus not causing an application restart.
 
 ## Dockerfile
 
