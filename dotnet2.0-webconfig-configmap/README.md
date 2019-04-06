@@ -16,4 +16,4 @@ The ConfigMap containing our cloudy Web.config is located in `configmap.yml`. As
 
 ## run.cmd
 
-This is the custom entrypoint for the application. It's responsible for coping the config into the application's directory.
+This is the custom entrypoint for the application. It's responsible for copying the config into the application's directory.
