@@ -8,4 +8,4 @@ In general the individual projects are meant to be small and only demonstrate th
 
 * **asp-with-oledb** A classic ASP project that connects to a SQL Server database via OLEDB
 
-* **asp-with-odbc** A classic ASP project that connects to a SQL Server database via ODBC with a DSN configured at the system level.
+* **asp-with-odbc** A classic ASP project that connects to a SQL Server database via ODBC with a DSN configured at the system level
