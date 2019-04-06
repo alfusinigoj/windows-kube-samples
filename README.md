@@ -4,7 +4,9 @@ Here are sample projects for a number of common scenarios where a Solutions Arch
 
 In general the individual projects are meant to be small and only demonstrate the resolution to a single problem, but more complete demonstrations may be added later.
 
-In general these Dockerfiles should be buildable and runnable on Windows 10, but in order to deploy them to PKS they must be build on Server 2019.
+These Dockerfiles should be buildable and runnable on Windows 10, but in order to deploy them to PKS they must be build on Server 2019.
+
+Unless noted otherwise the strategy used in these samples is to have zero code change in the target projects. That may or may not be the most appropriate strategy in the field. Any samples that illustrate best practices requiring code/project modification will be notated accordingly.
 
 ## Projects
 
