@@ -1,4 +1,4 @@
-# ASP with OLEDB
+# ASP with ODBC
 
 This project demonstrates a classic ASP application connecting to a SQL Server database via ODBC.
 
