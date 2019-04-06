@@ -7,7 +7,7 @@ Because the MDAC is generally available on Windows Server nothing special is req
 
 The Dockerfile assumes that you have the contents of your web application in the `wwwroot` directory at the same level as the Dockerfile.
 
-# default.asp 
+## wwwroot/default.asp 
 In `default.asp` you'll have to specify the connection string relevant to your environment. 
 
 While specifying such information directly in code is not desirable, it's a pattern often found in legacy ASP applications. In the future content will be added demonstrating config externalization.

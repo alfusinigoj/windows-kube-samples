@@ -18,7 +18,7 @@ RUN Add-OdbcDsn -Name "your-dsn" -DriverName "\"ODBC Driver 13 For SQL Server\""
 
 In the Dockerfile You'll have to replace `hostname-or-ip` with the correct address in your environment and `your-dsn` with the DSN your application expects. 
 
-# default.asp 
+## wwwroot/default.asp 
 In `default.asp` you'll have to specify the DSN, username, and password relevant to your environment. 
 
 While specifying such information directly in code is not desirable, it's a pattern often found in legacy ASP applications. In the future content will be added demonstrating config externalization.
