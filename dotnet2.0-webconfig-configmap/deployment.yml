@@ -1,0 +1,33 @@
+﻿---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+    labels:
+        app: webconfigconfigmap
+    name: webconfigconfigmap
+spec:
+    replicas: 1
+    template:
+        metadata:
+            labels:
+                app: webconfigconfigmap
+            name: webconfigconfigmap
+        spec:
+            containers:
+            - name: webapp
+              image: <insert your repo/image:tag here>
+              ports:
+              - containerPort: 80
+              volumeMounts:
+                - name: config-volume
+                  mountPath: /config/
+            volumes:
+            - name: config-volume
+              configMap:
+                name: webconfigconfigmap-web-config
+            tolerations:
+            - key: windows
+              value: "1803"
+              effect: NoSchedule
+            nodeSelector:
+                beta.kubernetes.io/os: windows

@@ -11,4 +11,3 @@ The `Dockerfile` assume that you've published the application to the `bin\Releas
 The `Dockerfile` also assumes that your solution is named Dotnet2WebForms and is placed at the same level as the `Dockerfile`.
 
 ## TODO
-* Add K8s YAML spec

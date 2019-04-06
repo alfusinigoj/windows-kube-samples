@@ -15,3 +15,5 @@ Unless noted otherwise the strategy used in these samples is to have zero code c
 * **asp-with-odbc** A classic ASP project that connects to a SQL Server database via ODBC with a DSN configured at the system level
 
 * **dotnet2.0-webforms** An ASP.NET 2.0 WebForms sample
+
+* **dotnet2.0-webconfig-configmap** An ASP.NET 2.0 WebForms sample whose configuration is sourced from a ConfigMap
