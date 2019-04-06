@@ -4,7 +4,7 @@ This project demonstrates a classic ASP application connecting to a SQL Server d
 
 ## Dockerfile
 
-During the build process this Dockerfile installs the ODBC Driver for SQL Server and configures a system-level DNS.
+During the build process this Dockerfile installs the ODBC Driver for SQL Server and configures a system-level DSN.
 
 ```
 # Install the ODBC Driver for SQL Server
