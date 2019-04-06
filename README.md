@@ -4,6 +4,8 @@ Here are sample projects for a number of common scenarios where a Solutions Arch
 
 In general the individual projects are meant to be small and only demonstrate the resolution to a single problem, but more complete demonstrations may be added later.
 
+In general these Dockerfiles should be buildable and runnable on Windows 10, but in order to deploy them to PKS they must be build on Server 2019.
+
 ## Projects
 
 * **asp-with-oledb** A classic ASP project that connects to a SQL Server database via OLEDB
