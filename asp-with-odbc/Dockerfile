@@ -5,10 +5,12 @@ EXPOSE 80
 RUN Install-WindowsFeature Web-ASP; 
 RUN powershell -NoProfile -Command Remove-Item -Recurse C:\inetpub\wwwroot\*
 
+# Install the ODBC Driver for SQL Server
 RUN md c:/msi;
 RUN Invoke-WebRequest 'https://download.microsoft.com/download/1/E/7/1E7B1181-3974-4B29-9A47-CC857B271AA2/English/X64/msodbcsql.msi' -OutFile c:/msi/msodbcsql.msi; 
 RUN ["cmd", "/S", "/C", "c:\\windows\\syswow64\\msiexec", "/i", "c:\\msi\\msodbcsql.msi", "IACCEPTMSODBCSQLLICENSETERMS=YES", "ADDLOCAL=ALL", "/qn"];
 
+# Add the DSN
 RUN Add-OdbcDsn -Name "pkstest" -DriverName "\"ODBC Driver 13 For SQL Server\""  -DsnType "System"  -SetPropertyValue @("\"Server=hostname-or-ip\"", "\"Trusted_Connection=No\"");
 
 WORKDIR /inetpub/wwwroot
