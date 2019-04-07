@@ -4,9 +4,9 @@ Here are sample projects for a number of common scenarios where a Solutions Arch
 
 In general the individual projects are meant to be small and only demonstrate the resolution to a single problem, but more complete demonstrations may be added later.
 
-These Dockerfiles should be buildable and runnable on Windows 10, but in order to deploy them to PKS they must be built on Server 2019.
+Unless noted otherwise the strategy used in these samples is to have zero code change in the target projects. It's meant to sumulate just dropping the Dockerfile and K8s artifacts above the solution directory with no polution of the app source tree itself. That may or may not be the most appropriate strategy in the field and I'm not advocating that as a best practice. Any samples that do attempt to illustrate best practices (thus likely requiring code/project modification) will be notated accordingly.
 
-Unless noted otherwise the strategy used in these samples is to have zero code change in the target projects. That may or may not be the most appropriate strategy in the field. Any samples that illustrate best practices requiring code/project modification will be notated accordingly.
+*These Dockerfiles should be buildable and runnable on Windows 10, but in order to deploy them to PKS they must be built on Server 2019.*
 
 ## Projects
 
