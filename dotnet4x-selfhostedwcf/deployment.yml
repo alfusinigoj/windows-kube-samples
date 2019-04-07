@@ -1,0 +1,26 @@
+﻿---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+    labels:
+        app: windowsservicewcf
+    name: windowsservicewcf
+spec:
+    replicas: 1
+    template:
+        metadata:
+            labels:
+                app: windowsservicewcf
+            name: windowsservicewcf
+        spec:
+            containers:
+            - name: webapp
+              image: <insert your repo/image:tag here>
+              ports:
+              - containerPort: 8080
+            tolerations:
+            - key: windows
+              value: "1803"
+              effect: NoSchedule
+            nodeSelector:
+                beta.kubernetes.io/os: windows
