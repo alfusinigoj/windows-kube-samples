@@ -1,0 +1,26 @@
+﻿---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+    labels:
+        app: isapimodule
+    name: isapimodule
+spec:
+    replicas: 1
+    template:
+        metadata:
+            labels:
+                app: isapimodule
+            name: isapimodule
+        spec:
+            containers:
+            - name: webapp
+              image: chrisumbel/isapi
+              ports:
+              - containerPort: 80
+            tolerations:
+            - key: windows
+              value: "1803"
+              effect: NoSchedule
+            nodeSelector:
+                beta.kubernetes.io/os: windows

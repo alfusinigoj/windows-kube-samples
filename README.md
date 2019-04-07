@@ -21,3 +21,5 @@ Unless noted otherwise the strategy used in these samples is to have zero code c
 * **dotnet2.0-webconfig-atlcom32** An ASP.NET 2.0 WebForms sample that depends on a custom 32-bit ATL/COM library
 
 * **dotnet4x-selfhostedwcf** A WCF service hosted in a Windows service
+
+* **isapi-module** A VC++ ISAPI module
