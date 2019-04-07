@@ -19,7 +19,7 @@ RUN C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe /username=.\pk
 
 EXPOSE 8080
 
-# The real business of the app lifecycle is managed by Windows due to this app being a server so there isnt'
+# The real business of the app lifecycle is managed by Windows due to this app being a Service so there isnt'
 # really a need for us to worry about it in Docker. However, we do need some process to run that docker can
 # watch so it knows we're still alive. This command let's Windows manage that lifecycle while we just watch
 # the state of the service, exiting if the process dissapears thus destroying the container. 
