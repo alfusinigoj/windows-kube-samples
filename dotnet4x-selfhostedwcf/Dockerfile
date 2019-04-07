@@ -11,4 +11,4 @@ RUN C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe /username=.\pk
 
 EXPOSE 8080
 
-ENTRYPOINT []
+CMD ["powershell", "while($true) { Start-Sleep -Seconds 1}"]
