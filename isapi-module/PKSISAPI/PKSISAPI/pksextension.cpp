@@ -18,6 +18,14 @@ void ResponseWrite(EXTENSION_CONTROL_BLOCK* pECB, char* sz)
 
 DWORD WINAPI HttpExtensionProc(EXTENSION_CONTROL_BLOCK* pECB) 
 {
+	HSE_SEND_HEADER_EX_INFO header;
+	header.pszStatus = "200 OK";
+	header.pszHeader = "Content-type: text/html\r\n\r\n";
+	header.cchStatus = strlen(header.pszStatus);
+	header.cchHeader = strlen(header.pszHeader);
+	header.fKeepConn = FALSE;
+	pECB->ServerSupportFunction(pECB->ConnID, HSE_REQ_SEND_RESPONSE_HEADER_EX, &header, NULL, NULL);
+
 	ResponseWrite(pECB, (char *)"<html><body>Hello, PKS!</body></html>\r\n");
 	return HSE_STATUS_SUCCESS;
 }
