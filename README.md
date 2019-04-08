@@ -22,4 +22,6 @@ Unless noted otherwise the strategy used in these samples is to have zero code c
 
 * **dotnet4x-selfhostedwcf** A WCF service hosted in a Windows service
 
+* **dotnet4x-msmq** A Windows Service receiving messages from a front-end WebAPI via MSMQ
+
 * **isapi-module** A VC++ ISAPI module
