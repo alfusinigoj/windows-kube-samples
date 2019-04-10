@@ -13,6 +13,8 @@ Configure <YOUR SERVICE NAME> and <YOUR NAMESPACE> with the correct values for y
 
 # Testing through KubeProxy
 
+I've deliberately left front end `Service` specs out of most of the samples and leave that for the reader. You can either create your own `Service` or you can use KubeProxy.
+
 Assuming you have kubeproxy running with `kubectl proxy` you can
 
 `curl -X POST http://localhost:8001/api/v1/namespaces/<YOUR NAMESPACE>/pods/<YOUR API POD NAME>/proxy/api/message -H "Content-Type: application/x-www-form-urlencoded" --data 'message=data1'|more`
