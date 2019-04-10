@@ -13,6 +13,10 @@ Configure <YOUR SERVICE NAME> and <YOUR NAMESPACE> with the correct values for y
 
 # Testing through KubeProxy
 
-curl -X POST http://localhost:8001/api/v1/namespaces/<YOUR NAMESPACE>/pods/<YOUR API POD NAME>/proxy/api/message -H "Content-Type: application/x-www-form-urlencoded" --data 'message=data1'|more
+Assuming you have kubeproxy running with `kubectl proxy` you can
 
-You will see the message show up in the EventLog of the daemon.
+`curl -X POST http://localhost:8001/api/v1/namespaces/<YOUR NAMESPACE>/pods/<YOUR API POD NAME>/proxy/api/message -H "Content-Type: application/x-www-form-urlencoded" --data 'message=data1'|more`
+
+You will see the message show up in the EventLog of the daemon with
+
+`Get-EventLog -LogName Application -Source Qbert`
