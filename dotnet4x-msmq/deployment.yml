@@ -15,16 +15,15 @@ spec:
         spec:
             containers:
             - name: qbertdaemon
-              image: <insert your repo/image:tag here>
+              image: chrisumbel/qbertdaemon:300
               ports:
-              - containerPort: 1801                            
+              - containerPort: 1801   
             tolerations:
             - key: windows
               value: "1803"
               effect: NoSchedule
             nodeSelector:
                 beta.kubernetes.io/os: windows
----
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
@@ -42,9 +41,9 @@ spec:
         spec:
             containers:
             - name: qbertapi
-              image: <insert your repo/image:tag here>
+              image: chrisumbel/qbertapi:301
               ports:
-              - containerPort: 80            
+              - containerPort: 80        
             tolerations:
             - key: windows
               value: "1803"
@@ -55,7 +54,7 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-  name: dotnet4qbertdaemon
+  name: qbertdaemon
 spec:
   selector:
     app: dotnet4qbertdaemon
