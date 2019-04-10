@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Messaging;
+using System.Configuration;
 
 namespace API.Controllers
 {
@@ -17,7 +18,7 @@ namespace API.Controllers
         {
             Console.WriteLine(message.Message);
 
-            string queueName = "FormatName:Direct=TCP:<URL OF DAEMON SERVICE>\\Private$\\TestQueue";
+            string queueName = ConfigurationManager.AppSettings["remote_queue"];
 
             using (MessageQueue queue = new MessageQueue(queueName))
             {
