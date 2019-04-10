@@ -15,7 +15,7 @@ spec:
         spec:
             containers:
             - name: qbertdaemon
-              image: chrisumbel/qbertdaemon:214
+              image: <insert your repo/image:tag here>
               ports:
               - containerPort: 1801                            
             tolerations:
@@ -42,7 +42,7 @@ spec:
         spec:
             containers:
             - name: qbertapi
-              image: chrisumbel/qbertapi:214
+              image: <insert your repo/image:tag here>
               ports:
               - containerPort: 80            
             tolerations:
