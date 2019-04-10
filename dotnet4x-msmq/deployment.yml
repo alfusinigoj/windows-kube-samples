@@ -3,24 +3,62 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
     labels:
-        app: dotnet4qbert
-    name: dotnet4qbert
+        app: dotnet4qbertdaemon
+    name: dotnet4qbertdaemon
 spec:
     replicas: 1
     template:
         metadata:
             labels:
-                app: dotnet4qbert
-            name: dotnet4qbert
+                app: dotnet4qbertdaemon
+            name: dotnet4qbertdaemon
         spec:
             containers:
-            - name: qbert
+            - name: qbertdaemon
               image: <insert your repo/image:tag here>
               ports:
-              - containerPort: 80
+              - containerPort: 1801                            
             tolerations:
             - key: windows
               value: "1803"
               effect: NoSchedule
             nodeSelector:
                 beta.kubernetes.io/os: windows
+---
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+    labels:
+        app: dotnet4qbertapi
+    name: dotnet4qbertapi
+spec:
+    replicas: 1
+    template:
+        metadata:
+            labels:
+                app: dotnet4qbertapi
+            name: dotnet4qbertapi
+        spec:
+            containers:
+            - name: qbertapi
+              image: <insert your repo/image:tag here>
+              ports:
+              - containerPort: 80            
+            tolerations:
+            - key: windows
+              value: "1803"
+              effect: NoSchedule
+            nodeSelector:
+                beta.kubernetes.io/os: windows
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: dotnet4qbertdaemon
+spec:
+  selector:
+    app: dotnet4qbertdaemon
+  ports:
+  - protocol: TCP
+    port: 1801
