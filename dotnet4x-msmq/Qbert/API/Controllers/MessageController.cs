@@ -17,7 +17,7 @@ namespace API.Controllers
         {
             Console.WriteLine(message.Message);
 
-            string queueName = "FormatName:Direct=TCP:127.0.0.1\\Private$\\TestQueue";
+            string queueName = "FormatName:Direct=TCP:<URL OF DAEMON SERVICE>\\Private$\\TestQueue";
 
             using (MessageQueue queue = new MessageQueue(queueName))
             {
