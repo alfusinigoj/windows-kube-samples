@@ -10,7 +10,7 @@ RUN Install-WindowsFeature Web-ISAPI-Ext
 RUN Invoke-WebRequest -Uri https://aka.ms/vs/15/release/vc_redist.x64.exe -OutFile vc_redist.x64.exe
 RUN Start-Process -filepath ./vc_redist.x64.exe  -ArgumentList "/install", "/passive", "/norestart", "'/log a.txt'" -PassThru | Wait-Process
 
-COPY PKSISAPI/x64/Release/PKSISAPI.dll /Inetpub/wwwroot/isapi/
+COPY PKSISAPI.dll /Inetpub/wwwroot/isapi/
 
 # Configure IIS to execute our module
 RUN "c:/Windows/System32/inetsrv/appcmd.exe set config -section:system.webServer/security/isapiCgiRestriction /`+\"[path='C:\Inetpub\wwwroot\isapi\PKSISAPI.dll',allowed='True',groupId='PivotalGroup',description='PKS Extension']\" /commit:apphost"
